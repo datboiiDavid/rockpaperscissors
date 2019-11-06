@@ -6,7 +6,7 @@
 /* global $ */
 
 $("#shoot").click(function() {
-    $(".userChoice").text($("input").val();
+    $(".userChoice").text($("input").val());
 }
 
 // DOCUMENT READY FUNCTION BELOW
