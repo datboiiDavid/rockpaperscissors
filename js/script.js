@@ -7,17 +7,36 @@
 
 $("#shoot").click(function() {
     $("#userChoice").text($("input").val());
-    var choices = Math.random();
+    var userChoice = $("input").val()
+    var computerChoice;
 
+    var choices = Math.random();
     if (choices > .9){
         $("#text").text("Rock");
-
-    }
-
-    if else (choices > .6){
+        computerChoice = "Rock";
+    } else if(choices > .6){
         $("text").text("Paper");
+        computerChoice = "Paper"
+    } else {
+        $("text").text("Scissors");
+        computerChoice = "Scissors"
     }
-}
-)
+
+    var message;
+    if (userChoice === "Rock" &&
+        computerChoice === "Rock"){
+        message="tie";
+    }       
+    if (userChoice === "Paper" &&
+        computerChoice === "Rock"){
+        message= "userWinner";
+    }
+    if(choices === "Rock") {
+
+    }
+    // other combinations of choices
+
+    // display the message
+})
 // DOCUMENT READY FUNCTION BELOW
 
