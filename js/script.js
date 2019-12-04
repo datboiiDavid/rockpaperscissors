@@ -7,7 +7,7 @@
 
 $("#shoot").click(function() {
     $("#userChoice").text($("input").val());
-    var userChoice = $("input").val()
+    var choices = $("input").val()
     var computerChoice;
 
     var choices = Math.random();
@@ -23,17 +23,24 @@ $("#shoot").click(function() {
     }
 
     var message;
-    if (userChoice === "Rock" &&
+    if (choices === "Rock" &&
         computerChoice === "Rock"){
         message="tie";
     }       
-    if (userChoice === "Paper" &&
+    if (choices === "Paper" &&
         computerChoice === "Rock"){
         message= "userWinner";
     }
-    if(choices === "Rock") {
-
+    if(choices === "Scissors" &&
+        computerChoice === "Rock"){
+        message="computerWinner";
+    } 
+    if(choices === "Paper" &&
+        computerChoice === "Paper"){
+        message="tie";
     }
+
+    
     // other combinations of choices
 
     // display the message
